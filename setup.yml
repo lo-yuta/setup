@@ -55,12 +55,12 @@
                 name: geerlingguy.mac.homebrew
                 tasks_from: main.yml
 
-#            - name: Install mas and apps
-#              ansible.builtin.import_role:
-#                name: geerlingguy.mac.mas
-#                tasks_from: main.yml
+            - name: Install mas and apps
+              ansible.builtin.import_role:
+               name: geerlingguy.mac.mas
+               tasks_from: main.yml
 
-            - name: manage dock and apps
+            - name: Manage dock and apps
               tags:
                 - dock
               ansible.builtin.import_role:
